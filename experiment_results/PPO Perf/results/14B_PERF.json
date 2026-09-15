@@ -1,0 +1,151 @@
+{
+    "name": "14B_PERF",
+    "network_category": "IEEE",
+    "scenario_config": "<LOCAL_PROJECT_PATH>/scenarios/performance.yaml",
+    "results": [
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {
+                "runtime_timestep": {
+                    "values": {
+                        "mean": [1.3096763527641693, 97.95],
+                        "worst": [1.5811150688678026, 91.46]
+                    },
+                    "resulting_scores": 97.95,
+                    "resulting_values": 1.3096763527641693,
+                    "scoring_range": {
+                        "wp_val": {"mean": 2.5667873356611497, "worst": 2.9133815988898277},
+                        "bp_val": {"mean": 1.2833936678305748, "worst": 1.4566907994449139}
+                    }
+                },
+                "cpu_usage_timestep": {
+                    "values": {
+                        "mean": [21.68, 100.0],
+                        "worst": [27.4, 100.0]
+                    },
+                    "resulting_scores": 100.0,
+                    "resulting_values": 21.68,
+                    "scoring_range": {
+                        "wp_val": {"mean": 47.26129032258065, "worst": 53.1},
+                        "bp_val": {"mean": 22.26129032258065, "worst": 28.1}
+                    }
+                },
+                "memory_usage_timestep": {
+                    "values": {
+                        "mean": [11.033333333333328, 99.93],
+                        "worst": [11.2, 100.0]
+                    },
+                    "resulting_scores": 99.93,
+                    "resulting_values": 11.033333333333328,
+                    "scoring_range": {
+                        "wp_val": {"mean": 36.016129032258064, "worst": 36.2},
+                        "bp_val": {"mean": 11.016129032258066, "worst": 11.2}
+                    }
+                },
+                "category_score": 99.29333333333334
+            },
+            "index": 1920,
+            "amount_of_days": 1,
+            "total_score": 99.29333333333334
+        },
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {
+                "runtime_timestep": {
+                    "values": {
+                        "mean": [1.3385959304152772, 94.11],
+                        "worst": [1.5851670689880848, 97.91]
+                    },
+                    "resulting_scores": 94.11,
+                    "resulting_values": 1.3385959304152772,
+                    "scoring_range": {
+                        "wp_val": {"mean": 2.528356478032139, "worst": 3.1052930429577827},
+                        "bp_val": {"mean": 1.2641782390160694, "worst": 1.5526465214788914}
+                    }
+                },
+                "cpu_usage_timestep": {
+                    "values": {
+                        "mean": [23.192307692307693, 99.05],
+                        "worst": [31.3, 86.8]
+                    },
+                    "resulting_scores": 99.05,
+                    "resulting_values": 23.192307692307693,
+                    "scoring_range": {
+                        "wp_val": {"mean": 47.95555555555555, "worst": 53.0},
+                        "bp_val": {"mean": 22.955555555555552, "worst": 28.0}
+                    }
+                },
+                "memory_usage_timestep": {
+                    "values": {
+                        "mean": [11.146153846153842, 99.34],
+                        "worst": [11.4, 98.4]
+                    },
+                    "resulting_scores": 99.34,
+                    "resulting_values": 11.146153846153842,
+                    "scoring_range": {
+                        "wp_val": {"mean": 35.98148148148148, "worst": 36.0},
+                        "bp_val": {"mean": 10.981481481481481, "worst": 11.0}
+                    }
+                },
+                "category_score": 97.5
+            },
+            "index": 8640,
+            "amount_of_days": 1,
+            "total_score": 97.5
+        },
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {
+                "runtime_timestep": {
+                    "values": {
+                        "mean": [1.3171331305773213, 97.93],
+                        "worst": [1.4721357021480799, 100.0]
+                    },
+                    "resulting_scores": 97.93,
+                    "resulting_values": 1.3171331305773213,
+                    "scoring_range": {
+                        "wp_val": {"mean": 2.580956635499994, "worst": 2.9992689080536366},
+                        "bp_val": {"mean": 1.290478317749997, "worst": 1.4996344540268183}
+                    }
+                },
+                "cpu_usage_timestep": {
+                    "values": {
+                        "mean": [21.773076923076925, 100.0],
+                        "worst": [27.4, 100.0]
+                    },
+                    "resulting_scores": 100.0,
+                    "resulting_values": 21.773076923076925,
+                    "scoring_range": {
+                        "wp_val": {"mean": 47.24, "worst": 53.1},
+                        "bp_val": {"mean": 22.240000000000002, "worst": 28.1}
+                    }
+                },
+                "memory_usage_timestep": {
+                    "values": {
+                        "mean": [11.065384615384612, 99.78],
+                        "worst": [11.2, 100.0]
+                    },
+                    "resulting_scores": 99.78,
+                    "resulting_values": 11.065384615384612,
+                    "scoring_range": {
+                        "wp_val": {"mean": 36.010000000000005, "worst": 36.2},
+                        "bp_val": {"mean": 11.010000000000002, "worst": 11.2}
+                    }
+                },
+                "category_score": 99.23666666666668
+            },
+            "index": 21120,
+            "amount_of_days": 1,
+            "total_score": 99.23666666666668
+        }
+    ]
+}

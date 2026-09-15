@@ -1,0 +1,37 @@
+{
+  "model_config": {
+    "gine_hidden_dims": [
+      256,
+      256,
+      256,
+      256
+    ],
+    "gine_mlp_layers": 2,
+    "gine_mlp_activation": "elu",
+    "pooling": "add",
+    "fc_hidden_dims": [
+      256
+    ],
+    "fc_activation": "relu",
+    "norm": "graph",
+    "dropout": 0.19849278716375293
+  },
+  "ppo_config": {
+    "train_batch_size": 4096,
+    "minibatch_size": 1024,
+    "num_epochs": 7,
+    "gamma": 0.9531777804731106,
+    "lr": 3.140352590210459e-05,
+    "entropy_coeff": 0.006080131638960952,
+    "clip_param": 0.34312488519322276,
+    "vf_clip_param": 5.791169620815307,
+    "lambda_": 0.9318066548591906,
+    "num_envs_per_env_runner": 4
+  },
+  "_meta": {
+    "best_value": 90.7681839510662,
+    "best_trial_number": 11,
+    "n_trials_completed": 20,
+    "study_name": "gnn_ppo_tuning_IEEE30_reduced_line_cap_high"
+  }
+}

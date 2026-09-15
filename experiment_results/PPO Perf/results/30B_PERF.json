@@ -1,0 +1,55 @@
+{
+    "name": "30B_PERF",
+    "network_category": "IEEE",
+    "scenario_config": "<LOCAL_PROJECT_PATH>/scenarios/performance.yaml",
+    "results": [
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {
+                "runtime_timestep": {
+                    "values": {
+                        "mean": [1.4395848244700271, 100.0],
+                        "worst": [1.7997114323079586, 100.0]
+                    },
+                    "resulting_scores": 100.0,
+                    "resulting_values": 1.4395848244700271,
+                    "scoring_range": {
+                        "wp_val": {"mean": 3.0979450282175094, "worst": 3.7422650568187237},
+                        "bp_val": {"mean": 1.5489725141087547, "worst": 1.8711325284093618}
+                    }
+                },
+                "cpu_usage_timestep": {
+                    "values": {
+                        "mean": [21.41458333333333, 100.0],
+                        "worst": [27.2, 100.0]
+                    },
+                    "resulting_scores": 100.0,
+                    "resulting_values": 21.41458333333333,
+                    "scoring_range": {
+                        "wp_val": {"mean": 47.25937499999999, "worst": 54.0},
+                        "bp_val": {"mean": 22.259374999999995, "worst": 29.0}
+                    }
+                },
+                "memory_usage_timestep": {
+                    "values": {
+                        "mean": [11.551041666666668, 98.02],
+                        "worst": [12.0, 97.6]
+                    },
+                    "resulting_scores": 98.02,
+                    "resulting_values": 11.551041666666668,
+                    "scoring_range": {
+                        "wp_val": {"mean": 36.056250000000006, "worst": 36.4},
+                        "bp_val": {"mean": 11.056250000000004, "worst": 11.4}
+                    }
+                },
+                "category_score": 99.33999999999999
+            },
+            "index": 27840,
+            "amount_of_days": 1,
+            "total_score": 99.33999999999999
+        }
+    ]
+}
