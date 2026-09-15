@@ -1,0 +1,32 @@
+{
+    "total_score": 65.16000000000001,
+    "category_scores": {"overload_mitigation": 0.0, "voltage_violation_mitigation": 0.0, "survival": 0.0, "costs": 0.0, "computational_performance": 65.16000000000001},
+    "metrics_average": {
+        "runtime_timestep": {"score": 0.0, "value": 6.225595899146552},
+        "cpu_usage_timestep": {"score": 98.70833333333334, "value": 13.04859556526223},
+        "memory_usage_timestep": {"score": 96.77166666666668, "value": 26.9126960293627}
+    },
+    "metrics_gathered": {"amount_of_metrics": 3, "amount_of_scenarios": 2, "total_amount_metric_gathered": 12},
+    "scenarios": {
+        "14B_PERF": {
+            "scenario_score": 63.65333333333334,
+            "category_scores": {"overload_mitigation": 0.0, "voltage_violation_mitigation": 0.0, "survival": 0.0, "costs": 0.0, "computational_performance": 63.65333333333334},
+            "metrics_average": {
+                "runtime_timestep": {"score": 0.0, "value": 3.9827018181190277},
+                "cpu_usage_timestep": {"score": 97.41666666666667, "value": 13.86475869809203},
+                "memory_usage_timestep": {"score": 93.54333333333334, "value": 27.217283950617286}
+            },
+            "metrics_gathered": {"amount_of_metrics": 3, "total_amount_metric_gathered": 9}
+        },
+        "30B_PERF": {
+            "scenario_score": 66.66666666666667,
+            "category_scores": {"overload_mitigation": 0.0, "voltage_violation_mitigation": 0.0, "survival": 0.0, "costs": 0.0, "computational_performance": 66.66666666666667},
+            "metrics_average": {
+                "runtime_timestep": {"score": 0.0, "value": 8.468489980174077},
+                "cpu_usage_timestep": {"score": 100.0, "value": 12.23243243243243},
+                "memory_usage_timestep": {"score": 100.0, "value": 26.60810810810811}
+            },
+            "metrics_gathered": {"amount_of_metrics": 3, "total_amount_metric_gathered": 3}
+        }
+    }
+}

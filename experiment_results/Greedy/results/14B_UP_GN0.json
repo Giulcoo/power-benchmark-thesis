@@ -1,0 +1,257 @@
+{
+    "name": "14B_UP_GN0",
+    "network_category": "IEEE",
+    "scenario_config": "<LOCAL_PROJECT_PATH>/scenarios/ieee14.yaml[1]",
+    "results": [
+        {
+            "overload_mitigation": {
+                "timesteps_without_overload": {
+                    "values": [[0.0, 0.0]],
+                    "resulting_scores": 0.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 6.0}
+                },
+                "total_lines_overloaded": {
+                    "values": [[0.0, 100.0]],
+                    "resulting_scores": 100.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 90.0, "bp_val": 0.0}
+                },
+                "max_line_loading_timestep_nminus0": {
+                    "values": [[18.005722, 81.99], [17.027861, 82.97], [16.08023, 83.92], [15.878901, 84.12], [16.139533, 83.86], [16.700809, 83.3]],
+                    "resulting_scores": {"mean": 83.36, "worst": 81.99},
+                    "resulting_values": {"mean": 16.638842666666665, "worst": 18.005722},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "mean_line_loading_timestep_nminus0": {
+                    "values": [[2.11705, 97.88], [2.209311, 97.79], [2.444286, 97.56], [2.38179, 97.62], [2.364732, 97.64]],
+                    "resulting_scores": {"mean": 97.69800000000001, "worst": 97.56},
+                    "resulting_values": {"mean": 2.3034338, "worst": 2.444286},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "total_lines_overloaded_timestep_nminus0": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 100.0, "worst": 100.0},
+                    "resulting_values": {"mean": 0.0, "worst": 0.0},
+                    "scoring_range": {"wp_val": 15.0, "bp_val": 0.0}
+                },
+                "max_line_loading_nminus1": {
+                    "values": [[21.468194, 78.53], [20.651612, 79.35], [17.16524, 82.83], [19.074881, 80.93], [19.84063, 80.16]],
+                    "resulting_scores": {"mean": 80.35999999999999, "worst": 78.53},
+                    "resulting_values": {"mean": 19.640111400000002, "worst": 21.468194},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "total_lines_overloaded_timestep_nminus1": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [15.0, 0.0]],
+                    "resulting_scores": {"mean": 83.33333333333333, "worst": 0.0},
+                    "resulting_values": {"mean": 2.5, "worst": 15.0},
+                    "scoring_range": {"wp_val": 15.0, "bp_val": 0.0}
+                },
+                "category_score": 75.23594444444446
+            },
+            "voltage_violation_mitigation": {
+                "total_timesteps_with_voltage_violation": {
+                    "values": [[5.0, 16.67]],
+                    "resulting_scores": 16.67,
+                    "resulting_values": 5.0,
+                    "scoring_range": {"wp_val": 6.0, "bp_val": 0.0}
+                },
+                "max_voltage_timestep_deviation": {
+                    "values": [[0.157022, 0.0], [0.119195, 0.0], [0.381997, 0.0], [0.301966, 0.0], [0.270297, 0.0]],
+                    "resulting_scores": {"mean": 0.0, "worst": 0.0},
+                    "resulting_values": {"mean": 0.24609540000000002, "worst": 0.157022},
+                    "scoring_range": {"wp_val": 0.05, "bp_val": 0.0}
+                },
+                "mean_voltage_timestep_deviation": {
+                    "values": [[0.059108, 0.0], [0.049931, 0.14], [0.15903, 0.0], [0.130171, 0.0], [0.125646, 0.0]],
+                    "resulting_scores": {"mean": 0.028000000000000004, "worst": 0.0},
+                    "resulting_values": {"mean": 0.10477720000000001, "worst": 0.059108},
+                    "scoring_range": {"wp_val": 0.05, "bp_val": 0.0}
+                },
+                "percent_bus_voltage_violation": {
+                    "values": [[33.333333, 66.67], [33.333333, 66.67], [73.684211, 26.32], [73.684211, 26.32], [73.684211, 26.32], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 52.04999999999999, "worst": 26.32},
+                    "resulting_values": {"mean": 47.9532165, "worst": 73.684211},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "category_score": 13.581142857142854
+            },
+            "survival": {
+                "survived_iterations": {
+                    "values": [6.0, 6.25],
+                    "resulting_scores": 6.25,
+                    "resulting_values": 6.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 96.0}
+                },
+                "category_score": 6.25
+            },
+            "costs": {
+                "timesteps_without_actions": {
+                    "values": [[0.0, 0.0]],
+                    "resulting_scores": 0.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 6.0}
+                },
+                "substation_changes": {
+                    "values": [[5.0, 16.67]],
+                    "resulting_scores": 16.67,
+                    "resulting_values": 5.0,
+                    "scoring_range": {"wp_val": 6.0, "bp_val": 0.0}
+                },
+                "active_power_loss_timestep_percent": {
+                    "values": [[151.71777, 0.0], [146.551934, 0.0], [156.617585, 0.0], [155.67466, 0.0], [167.137403, 0.0], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 16.666666666666668, "worst": 0.0},
+                    "resulting_values": {"mean": 129.6165586666667, "worst": 151.71777},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "timesteps_with_load_shedding": {
+                    "values": [[1.0, 83.33]],
+                    "resulting_scores": 83.33,
+                    "resulting_values": 1.0,
+                    "scoring_range": {"wp_val": 6.0, "bp_val": 0.0}
+                },
+                "load_shedding_timestep_percent": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [100.0, 0.0]],
+                    "resulting_scores": {"mean": 83.33333333333333, "worst": 0.0},
+                    "resulting_values": {"mean": 16.666666666666668, "worst": 100.0},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "category_score": 28.571428571428573
+            },
+            "computational_performance": {"category_score": 0.0},
+            "index": 3840,
+            "amount_of_days": 1,
+            "total_score": 28.1194503968254
+        },
+        {
+            "overload_mitigation": {
+                "timesteps_without_overload": {
+                    "values": [[0.0, 0.0]],
+                    "resulting_scores": 0.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 4.0}
+                },
+                "total_lines_overloaded": {
+                    "values": [[0.0, 100.0]],
+                    "resulting_scores": 100.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 60.0, "bp_val": 0.0}
+                },
+                "max_line_loading_timestep_nminus0": {
+                    "values": [[15.420728, 84.58], [14.682992, 85.32], [14.273273, 85.73], [14.221119, 85.78]],
+                    "resulting_scores": {"mean": 85.35249999999999, "worst": 84.58},
+                    "resulting_values": {"mean": 14.649528, "worst": 15.420728},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "mean_line_loading_timestep_nminus0": {
+                    "values": [[2.111398, 97.89], [2.291984, 97.71], [2.290725, 97.71]],
+                    "resulting_scores": {"mean": 97.77, "worst": 97.71},
+                    "resulting_values": {"mean": 2.231369, "worst": 2.291984},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "total_lines_overloaded_timestep_nminus0": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 100.0, "worst": 100.0},
+                    "resulting_values": {"mean": 0.0, "worst": 0.0},
+                    "scoring_range": {"wp_val": 15.0, "bp_val": 0.0}
+                },
+                "max_line_loading_nminus1": {
+                    "values": [[18.783267, 81.22], [15.345382, 84.65], [16.661463, 83.34]],
+                    "resulting_scores": {"mean": 83.07000000000001, "worst": 81.22},
+                    "resulting_values": {"mean": 16.93003733333333, "worst": 18.783267},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "total_lines_overloaded_timestep_nminus1": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [15.0, 0.0]],
+                    "resulting_scores": {"mean": 75.0, "worst": 0.0},
+                    "resulting_values": {"mean": 3.75, "worst": 15.0},
+                    "scoring_range": {"wp_val": 15.0, "bp_val": 0.0}
+                },
+                "category_score": 75.39187500000001
+            },
+            "voltage_violation_mitigation": {
+                "total_timesteps_with_voltage_violation": {
+                    "values": [[3.0, 25.0]],
+                    "resulting_scores": 25.0,
+                    "resulting_values": 3.0,
+                    "scoring_range": {"wp_val": 4.0, "bp_val": 0.0}
+                },
+                "max_voltage_timestep_deviation": {
+                    "values": [[0.10556, 0.0], [0.29845, 0.0], [0.285777, 0.0]],
+                    "resulting_scores": {"mean": 0.0, "worst": 0.0},
+                    "resulting_values": {"mean": 0.22992899999999997, "worst": 0.10556},
+                    "scoring_range": {"wp_val": 0.05, "bp_val": 0.0}
+                },
+                "mean_voltage_timestep_deviation": {
+                    "values": [[0.046465, 7.07], [0.121926, 0.0], [0.120808, 0.0]],
+                    "resulting_scores": {"mean": 2.356666666666667, "worst": 0.0},
+                    "resulting_values": {"mean": 0.09639966666666666, "worst": 0.121926},
+                    "scoring_range": {"wp_val": 0.05, "bp_val": 0.0}
+                },
+                "percent_bus_voltage_violation": {
+                    "values": [[33.333333, 66.67], [73.684211, 26.32], [66.666667, 33.33], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 56.58, "worst": 26.32},
+                    "resulting_values": {"mean": 43.42105275, "worst": 73.684211},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "category_score": 15.75095238095238
+            },
+            "survival": {
+                "survived_iterations": {
+                    "values": [4.0, 4.17],
+                    "resulting_scores": 4.17,
+                    "resulting_values": 4.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 96.0}
+                },
+                "category_score": 4.17
+            },
+            "costs": {
+                "timesteps_without_actions": {
+                    "values": [[0.0, 0.0]],
+                    "resulting_scores": 0.0,
+                    "resulting_values": 0.0,
+                    "scoring_range": {"wp_val": 0.0, "bp_val": 4.0}
+                },
+                "substation_changes": {
+                    "values": [[3.0, 25.0]],
+                    "resulting_scores": 25.0,
+                    "resulting_values": 3.0,
+                    "scoring_range": {"wp_val": 4.0, "bp_val": 0.0}
+                },
+                "active_power_loss_timestep_percent": {
+                    "values": [[104.23419, 0.0], [106.856017, 0.0], [107.09563, 0.0], [0.0, 100.0]],
+                    "resulting_scores": {"mean": 25.0, "worst": 0.0},
+                    "resulting_values": {"mean": 79.54645925, "worst": 104.23419},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "timesteps_with_load_shedding": {
+                    "values": [[1.0, 75.0]],
+                    "resulting_scores": 75.0,
+                    "resulting_values": 1.0,
+                    "scoring_range": {"wp_val": 4.0, "bp_val": 0.0}
+                },
+                "load_shedding_timestep_percent": {
+                    "values": [[0.0, 100.0], [0.0, 100.0], [0.0, 100.0], [100.0, 0.0]],
+                    "resulting_scores": {"mean": 75.0, "worst": 0.0},
+                    "resulting_values": {"mean": 25.0, "worst": 100.0},
+                    "scoring_range": {"wp_val": 100.0, "bp_val": 0.0}
+                },
+                "category_score": 28.571428571428573
+            },
+            "computational_performance": {"category_score": 0.0},
+            "index": 18240,
+            "amount_of_days": 1,
+            "total_score": 27.92088541666667
+        },
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {"category_score": 0.0},
+            "index": 26880,
+            "amount_of_days": 1,
+            "total_score": 0.0
+        }
+    ]
+}

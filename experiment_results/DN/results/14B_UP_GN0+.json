@@ -1,0 +1,38 @@
+
+{
+    "name": "14B_UP_GN0+",
+    "network_category": "IEEE",
+    "scenario_config": "<LOCAL_PROJECT_PATH>/scenarios/ieee14.yaml[4]",
+    "results": [
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {"category_score": 0.0},
+            "index": 3840,
+            "amount_of_days": 1,
+            "total_score": 0.0
+        },
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {"category_score": 0.0},
+            "index": 18240,
+            "amount_of_days": 1,
+            "total_score": 0.0
+        },
+        {
+            "overload_mitigation": {"category_score": 0.0},
+            "voltage_violation_mitigation": {"category_score": 0.0},
+            "survival": {"category_score": 0.0},
+            "costs": {"category_score": 0.0},
+            "computational_performance": {"category_score": 0.0},
+            "index": 26880,
+            "amount_of_days": 1,
+            "total_score": 0.0
+        }
+    ]
+}

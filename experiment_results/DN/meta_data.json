@@ -1,0 +1,84 @@
+{
+    "name": "DN",
+    "agent": "DoNothing",
+    "description": "Experiment of DN",
+    "config_file": "<LOCAL_PROJECT_PATH>/configs/dn_config.yaml",
+    "weights": {
+        "overload_mitigation": {
+            "timesteps_without_overload": 1.0,
+            "total_lines_overloaded": 1.0,
+            "max_line_loading_timestep_nminus0": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "mean_line_loading_timestep_nminus0": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "total_lines_overloaded_timestep_nminus0": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "max_line_loading_nminus1": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "total_lines_overloaded_timestep_nminus1": {
+                "mean": 1.0,
+                "worst": 1.0
+            }
+        },
+        "voltage_violation_mitigation": {
+            "total_timesteps_with_voltage_violation": 1.0,
+            "max_voltage_timestep_deviation": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "mean_voltage_timestep_deviation": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "percent_bus_voltage_violation": {
+                "mean": 1.0,
+                "worst": 1.0
+            }
+        },
+        "survival": {
+            "survived_iterations": 1.0
+        },
+        "costs": {
+            "timesteps_without_actions": 1.0,
+            "substation_changes": 1.0,
+            "active_power_loss_timestep_percent": {
+                "mean": 1.0,
+                "worst": 1.0
+            },
+            "timesteps_with_load_shedding": 1.0,
+            "load_shedding_timestep_percent": {
+                "mean": 1.0,
+                "worst": 1.0
+            }
+        },
+        "computational_performance": {
+            "runtime_timestep": {
+                "mean": 0.0,
+                "worst": 0.0
+            },
+            "cpu_usage_timestep": {
+                "mean": 0.0,
+                "worst": 0.0
+            },
+            "memory_usage_timestep": {
+                "mean": 0.0,
+                "worst": 0.0
+            }
+        },
+        "total": {
+            "overload_mitigation": 2.0,
+            "voltage_violation_mitigation": 2.0,
+            "costs": 1.0,
+            "computational_performance": 0.0,
+            "survival": 3.0
+        }
+    }
+}
