@@ -1,0 +1,38 @@
+\chapter{Introduction}\label{ch:introduction}
+This chapter introduces the topic of this thesis and motivates the need for a benchmarking tool for \ac{rl} agents in power grid operation. Section \ref{sec:motivation} outlines the increasing complexity of power grid operation and the growing role of \ac{rl} in addressing it, together with the resulting need for reliable benchmarking. Section \ref{sec:problem-statement} then identifies the gap in existing benchmarking tools that this work addresses. Building on this, Section \ref{sec:research-question} formulates the research question guiding this thesis. Section \ref{sec:contributions} summarises the main contributions made to answer this research question. Finally, Section \ref{sec:thesis-structure} outlines the structure of the remainder of this thesis. 
+
+\section{Motivation}\label{sec:motivation}
+Power grids are complex systems operated by \ac{tso} organisations that aim to keep the grid in a stable state. Traditionally, power generation relied on fuel-based power sources (e.g. coal, natural gas and nuclear) \cite{rl4network_operation}, and the only fluctuating grid component that had to be predicted was the power consumption at the loads. Nowadays, the trend has shifted towards increasingly incorporating renewable energy sources \cite{us_epa_power_2022}. Renewable energy sources are more decentralised than traditional power sources \cite{RoleOfGridExtensionsEurope} and fluctuate in energy production, depending on external factors such as weather conditions \cite{challenges_integrating_var_renewables}. This, together with the fluctuating power consumption, brings a greater challenge in stabilising power grids. 
+
+Improvements in \ac{rl} enabled \ac{rl} agents to solve complex problems involving large data sets \cite{glavic2017reinforcement}. This has driven progress in research on the use of \ac{rl} in power grid operation \cite{fan2022powergym}, in order to train an agent to stabilise a grid, even with high fluctuation. Furthermore, due to work such as the \ac{l2rpn} challenge, many researchers were encouraged to develop different approaches in solving the problem of maintaining grid stability \cite{l2rpn}. 
+
+Before such agents can be trusted or deployed in real-world applications, their performance needs to be rigorously and fairly evaluated. Benchmarks are necessary for comparing different agents and building trust in their real-world use in power grids. For this reason, challenges such as \ac{l2rpn} and benchmarks such as RL2Grid by \citet{rl2grid} or PowerGym by \citet{fan2022powergym} emerged. 
+
+\section{Problem Statement}\label{sec:problem-statement}
+As already mentioned in the previous section, several \ac{rl} benchmarks for power grid operation already exist. However, these benchmarks rely strongly on a single cumulative reward score. While a single aggregated score might hint towards the quality of an agent's performance, it does not reveal strengths and weaknesses or expose undesirable behaviours. These existing tools offer limited diagnostic capabilities that would help visualise an agent's decisions and performance during evaluation. 
+
+Furthermore, current benchmarks typically evaluate agents on a fixed and narrow set of scenarios. This limits the insight into how agents handle varying grid conditions, such as different grid sizes, unbalanced generation or consumption, and maintenance of grid components.
+
+Benchmarking \ac{rl} agents in power grids requires both quantitative scoring, which includes multiple metric values that form scores for easier comparison between agents, and qualitative feedback, which provides a deeper understanding of agents' strengths, weaknesses and behaviour. This creates the research gap, as the benchmark's reviewed in this thesis do not provide both an aggregated performance score and a detailed, multi-scenario diagnostic feedback.
+
+\section{Research Question}\label{sec:research-question}
+From the motivation presented in Section \ref{sec:motivation} and the research problem defined in Section \ref{sec:problem-statement}, the following research question arises:
+
+\begin{displayquote}
+How can a benchmarking tool be designed to quantitatively and qualitatively evaluate and compare agents for power grid operation, providing both an overall performance score and detailed feedback on their strengths and weaknesses across different operating scenarios?
+\end{displayquote}
+
+
+
+\section{Contributions}\label{sec:contributions}
+To answer the research question, this thesis presents a design and implementation of \benchmark, a benchmarking tool for \ac{rl} agents in power grid operation. In particular, this work provides a hierarchical, normalised scoring system, which enables both a single overall comparison and granular breakdowns of performance for different aspects of the evaluation. It offers a configurable scenario system, which enables diverse, reproducible test conditions across many operating situations. Furthermore, it includes qualitative diagnostic tools, with replay visualisation of the agent's actions and the benchmark results, enabling in-depth inspection of agent behaviour over time, across scenarios, and across benchmark metrics. 
+
+Additionally, it integrates support for using custom \ac{rl} agents, as well as baseline agents, including hyperparameter tuning, training and evaluation for each of the configured scenarios. Afterwards, the standardised scoring makes it possible to compare multiple agents against each other and to find strengths and weaknesses for each. 
+
+The presented benchmark is compared against previously mentioned existing benchmarking tools, highlighting how \benchmark contributes to a new direction of qualitative benchmarking of \ac{rl} agents in power grid operation. The source code of \benchmark is publicly available at \coderepo, while the source code of this thesis, along with additional resources such as the experiment result files, is available at \thesisrepo.
+
+
+
+
+\section{Thesis Structure}\label{sec:thesis-structure}
+The remainder of this thesis is structured as follows. Chapter \ref{ch:background} introduces the necessary fundamentals in power grid operation, \ac{rl} and benchmarking, for a better understanding of the theory and terminology used throughout this work. Following this, Chapter \ref{ch:related-work} presents existing research on the application of \ac{ml} in power grids and benchmarking tools for \ac{rl}. Chapter \ref{ch:methodology} presents the conceptual design of \benchmark, including its scenario design and scoring system. Chapter \ref{ch:implementation} describes the technical implementation of \benchmark, covering the implementation of scenarios, the integration of agents and the formats in which the benchmark results can be visualised. Chapter \ref{ch:experiments} presents the experimental setup and results, using \benchmark on a variety of different trials and agents. Chapter \ref{ch:discussion} discusses multiple aspects of this work. This covers the design decisions made throughout this work, evaluation of \benchmark against the principles of a well-designed benchmark covered in Chapter \ref{ch:background}, comparison of existing benchmark tools presented in Chapter \ref{ch:related-work}, reflection on the lessons learned from the experiments, and limitations of this thesis. Finally, Chapter \ref{ch:conclusion} summarises the main contributions and findings of this thesis and outlines directions for future work. 

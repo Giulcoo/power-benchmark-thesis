@@ -1,0 +1,11 @@
+\chapter*{Summary}
+
+% Inhaltsverzeichnis und Kopfzeile
+\addcontentsline{toc}{chapter}{Summary}
+\markboth{Summary}{Summary}
+
+The growing complexity of power grids, coupled with the increasing usage of agents such as reinforcement learning agents and heuristic controllers in these systems, creates a need for reliable methods to evaluate and compare strategies for power grid operation. Existing benchmarks often focus on aggregated performance measures, such as cumulative reward, which enable agents to be ranked. However, these measures offer limited insight into the individual strengths, weaknesses and behaviour of the agents. This thesis addresses this gap by designing and implementing \benchmark, a configurable benchmarking tool for agents in power grid operation.
+
+The benchmark combines quantitative scoring with detailed diagnostic feedback. Reinforcement learning agents are evaluated across configurable scenarios covering different grids, profiles, and grid modifications. Their performance is measured using multiple grid metrics, which cover different categories of power grid operation. Each metric is normalised to form a score, which is then aggregated hierarchically to form a total score. To analyse the results, \benchmark offers textual and visual presentations as well as replay functionality that enable the inspection of agent actions and resulting grid states over time.
+
+The benchmark is evaluated through a series of thorough experiments that assess agents' performance in a variety of scenarios. The results of the experiments demonstrate that benchmarking power grid agents should not be reduced to a single aggregated score or to a single evaluation scenario. A deep analysis of multiple scores and a diverse set of scenarios is necessary to gain more knowledge of each agent.

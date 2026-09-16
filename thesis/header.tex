@@ -1,0 +1,203 @@
+\usepackage[numbers]{natbib} 
+
+% Select input encodung, usually utf8 is the best choice, on windows, \usepackage[latin1]{inputenc} maybe required
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{xcolor}
+
+\MakeOuterQuote{"} % Damit ist es möglich, " " zu verwenden ohne Umlaut zu erzeugen
+\defaulthyphenchar=127 % Dadurch werden auch Wörter mit Bindestrich getrennt, die schon Bindestriche enthalten.
+
+% Todo notes
+\usepackage{todonotes}
+\newcommand{\question}[2][]{%
+    \todo[color=blue!40, #1]{#2}%
+}
+
+% geometry
+\usepackage{framed}
+\usepackage[bindingoffset=1cm, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+% Headline
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\lhead{\leftmark} \rhead{\thepage}
+\cfoot{}
+\fancypagestyle{plain}{}
+
+\RedeclareSectionCommand[beforeskip=1.5cm,afterskip=1cm]{chapter}
+
+% Colors
+\usepackage{color}
+\usepackage{colortbl}
+
+% Tables
+\usepackage{tabularx}
+\usepackage{multirow}
+\setlength{\tabcolsep}{4pt}
+
+% Drawing graphs etc.
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows,automata}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=1cm,
+text centered, 
+draw=black, 
+fill=red!30]
+
+\tikzstyle{io} = [trapezium, 
+trapezium stretches=true, % A later addition
+trapezium left angle=70, 
+trapezium right angle=110, 
+minimum width=3cm, 
+minimum height=1cm, text centered, 
+draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+text width=3cm, 
+draw=black, 
+fill=orange!30]
+
+\tikzstyle{decision} = [diamond, 
+minimum width=3cm, 
+minimum height=1cm, 
+text centered, 
+draw=black, 
+fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% Footnotes
+\usepackage{footmisc}
+
+\usepackage{xspace}
+\newcommand{\sic}{[\acs{sic}]\xspace}
+
+% math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+
+% lists
+\usepackage{paralist}
+
+% Figures
+\usepackage{graphicx, wrapfig}
+\usepackage{subcaption}
+
+% Hyperlinks
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks, citecolor=black, linkcolor=black, urlcolor=black}
+
+% Minted
+\usepackage[chapter]{minted}
+%\usemintedstyle{xcode}
+\setminted{frame=single,tabsize=2,linenos,autogobble}
+
+\newmintinline[code]{text}{breaklines}
+
+\newminted[mdcodeblock]{md}{autogobble,frame=none,linenos=false,breaklines}
+
+% list of abbreviations
+\usepackage[printonlyused]{acronym}
+
+% Set line pitch
+\usepackage{setspace}
+\onehalfspacing              % anderthalbzeilig (oder auch \doublespace)
+
+%fancyBox
+%\usepackage{fancybox}
+
+% Layout corrections
+\clubpenalty = 10000
+% Layout corrections
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+% Figures
+\usepackage{caption}
+\usepackage[hypcap=true,labelformat=simple]{subcaption}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\usepackage{placeins}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{rotating} 
+
+% Texts
+\usepackage{seqsplit}
+
+% Frequently used column types
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % centering column type with fixed width
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % right aligned column type with fixed width
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % left aligned column type with fixed width
+
+% Shortcuts for referencing floats:
+\newcommand{\fig}[1]{\figurename~\ref{#1}} %shortcut for a figure reference
+\newcommand{\tab}[1]{Table~\ref{#1}} %shortcut for a table reference
+\newcommand{\eq}[1]{(\ref{#1})} %shortcut for an equation reference
+\newcommand{\lst}[1]{Listing~\ref{#1}} %shortcut for a listing reference
+\newcommand{\sect}[1]{Section~\ref{#1}} %shortcut for a Section reference
+
+% Personal shortcuts
+\usepackage{etoolbox}
+
+\newenvironment{note}[2]{%
+  \begin{leftbar}%
+  #1%
+  \ifstrempty{#2}{}{ \cite{#2}}%
+  \begin{itemize}%
+}{%
+  \end{itemize}%
+  \end{leftbar}%
+}
+
+\newenvironment{unfinished}{%
+  \begin{leftbar}%
+}{%
+  \end{leftbar}%
+}
+
+\usepackage{chngcntr}
+\counterwithout{equation}{section}
+
+\usepackage{xspace}
+\newcommand{\benchmark}{\textit{Power Benchmark}\xspace}
+
+\newcommand{\thesisrepo}{\url{https://github.com/Giulcoo/power-benchmark-thesis}}
+\newcommand{\coderepo}{\url{https://github.com/Giulcoo/power-benchmark}}
+\newcommand{\documentation}{https://github.com/Giulcoo/power-benchmark/wiki}
+
+\newcounter{sublisting}[listing]
+\renewcommand{\thesublisting}{\thelisting\alph{sublisting}}
+
+
+% For creating overview tables for scores in experiment result
+% #1 caption
+% #2 label
+% #3 table body (rows, already separated by & and \\, incl. \midrule)
+\newcommand{\agentresulttable}[3]{%
+  \begin{table}[htbp]
+    \centering
+    \caption{#1}
+    \label{#2}
+    \begin{tabular}{lrrr}
+      \toprule
+      Metric & Do-Nothing & Greedy & PPO \\
+      \midrule
+      #3
+      \bottomrule
+    \end{tabular}
+  \end{table}
+}

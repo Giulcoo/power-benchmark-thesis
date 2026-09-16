@@ -1,0 +1,81 @@
+\documentclass[
+    pdftex,
+    a4paper,
+    oneside,
+    parskip,
+    numbers=noenddot,
+    listof=totoc,
+    bibliography=totoc,
+    hyperfootnotes=false
+]{scrreprt}
+\setuptoc{toc}{totoc}
+
+\newcommand{\thesistitle}{Power-Benchmark: Benchmarking RL-agents for Power Grids}
+\newcommand{\thesistype}{M A S T E R ' S \hspace{0.2em} T H E S I S}
+\newcommand{\thesistypedesc}{for the Department of Electrical Engineering and Computer Science \\
+    of the university of Kassel}
+\newcommand{\thesisauthorname}{Giulio Maximilian Pazzi}
+\newcommand{\thesisauthorhomestreet}{...}
+\newcommand{\thesisauthorhometown}{Kassel}
+\newcommand{\thesisauthormatrikelnumber}{...}
+\newcommand{\thesisauthoremail}{...}
+\newcommand{\thesisdepartment}{Department Intelligent Embedded Systems}
+\newcommand{\thesisfirstreviewer}{Prof.\ Dr.\ Bernhard Sick}
+\newcommand{\thesissecondreviewer}{Prof.\ Dr.\ Joel Greenyer}
+\newcommand{\thesissupervisor}{Dominik Köhler,\ M.Sc.}
+% \newcommand{\thesisdate}{\today}
+\newcommand{\thesisdate}{September 16, 2026}
+
+\input{header}
+ 
+\begin{document} 
+
+    \pagenumbering{roman} 
+
+    \include{titlepage}
+    \include{declaration}
+    \include{abstract}
+
+    \tableofcontents
+
+    \include{acronyms}
+
+    \pagebreak
+    \pagenumbering{arabic} 
+
+    \include{chapter/introduction}
+    \include{chapter/background}
+    \include{chapter/related-work}
+    \include{chapter/methodology}
+    \include{chapter/implementation}
+    \include{chapter/experiments}
+    \include{chapter/discussion}
+    \include{chapter/conclusion}
+
+    % Die nächsten zwei Zeilen sind optional, sie sorgen dafür dass alles nach dem Inhalt wieder mit römischen Zahlen nummeriert wird.
+    \pagenumbering{roman}
+    \addtocounter{page}{6} % Dies ist die Anzahl der Seiten vor der Einleitung, muss möglicherweise angepasst werden, wenn das Inhaltsverzeichnis mehrere Seiten umfasst.
+
+    \bibliographystyle{plainnat}
+    \bibliography{bib/benchmarks, bib/powergrids, bib/machinelearning, bib/powergridoperation}
+
+    \listoffigures
+    \listoftables
+    \renewcommand{\listoflistingscaption}{List of Listings}
+    \listoflistings
+
+    \appendix
+    % Compact Appendix Text
+    \RedeclareSectionCommand[beforeskip=0.6cm,afterskip=0.3cm]{chapter}
+    \RedeclareSectionCommand[beforeskip=0.4cm,afterskip=0.2cm]{section}
+    \RedeclareSectionCommand[beforeskip=0.3cm,afterskip=0.01cm]{subsection}
+    \RedeclareSectionCommand[beforeskip=0.2cm,afterskip=0.01cm]{subsubsection}
+
+    \renewcommand{\textfraction}{0.05}
+    \renewcommand{\topfraction}{0.9}
+    \renewcommand{\floatpagefraction}{0.7}
+
+    \include{appendix/benchmark_components}
+    \include{appendix/experiment_setup}
+    \include{appendix/experiment_results}
+\end{document}
