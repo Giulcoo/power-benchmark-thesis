@@ -82,7 +82,11 @@ The release assets include:
 
 These files correspond to the experiments presented in the thesis and can be used to inspect or reproduce the reported results.
 
-### Reproducing the PPO Performance Experiment
+### Reproducing the Experiment
+
+First the [Power Benchmark](https://github.com/Giulcoo/power-benchmark) project needs to downloaded and correctly setup as described in the tool's wiki. 
+Then the configs and scenarios folder should be copied into the power-benchmark project folder to use the same configurations.
+Follow the wiki in [Power Benchmark](https://github.com/Giulcoo/power-benchmark) to run the config afterwards.
 
 For the **PPO Perf** experiment (computational performance test), the corresponding trained PPO checkpoint must be copied into the `PPO Perf` experiment folder before running the experiment.
 
