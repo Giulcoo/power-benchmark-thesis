@@ -62,7 +62,33 @@ This repository contains the material associated with the Master's thesis, inclu
 - the thesis source files
 - the final thesis PDF
 - experiment configurations
+- experiment and training results (see next section)
+
+### Experiment and Training Results
+
+Due to their size, the complete experiment and training artifacts are not stored directly in this repository.
+
+They are available through the repository's **GitHub Releases**:
+
+[View experiment and training results in GitHub Releases](https://github.com/Giulcoo/power-benchmark-thesis/releases/tag/results)
+
+The release assets include:
+
 - experiment results
+- for the PPO:
+  - hyperparameter tuning results
+  - training checkpoints
+  - training logs
+
+These files correspond to the experiments presented in the thesis and can be used to inspect or reproduce the reported results.
+
+### Reproducing the PPO Performance Experiment
+
+For the **PPO Perf** experiment (computational performance test), the corresponding trained PPO checkpoint must be copied into the `PPO Perf` experiment folder before running the experiment.
+
+The checkpoint is provided in the GitHub Release together with the other training artifacts.
+
+After downloading the release assets, copy the PPO performance checkpoint into the respective `PPO Perf` folder so that the agent can load the trained model when recreating the performance experiment.
 
 ## Power Benchmark
 

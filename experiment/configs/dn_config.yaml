@@ -17,14 +17,11 @@ scenario_files:
   - <project>/scenarios/ieee30.yaml[5]
   - <project>/scenarios/ieee30.yaml[6]
   - <project>/scenarios/ieee30.yaml[7]
-output_dir: <project>/output/DN_0826
-compare_with: <project>/output/Gnn_0726
+output_dir: <project>/output/DN
 task:
     - "Run"
     - "Evaluate"
     - "Replay"
-#    - "Webapp"
-#    - "Plot"
 logging_level: INFO
 n_cpu: Slurm
 plotter:

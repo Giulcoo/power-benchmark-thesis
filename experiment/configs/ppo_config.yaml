@@ -1,4 +1,4 @@
-name: "GNN PPO Agent"
+name: "PPO Agent"
 agent_type:
   checkpoint_dir: <output>/checkpoints
   module_name: example.PpoAgent
@@ -36,13 +36,13 @@ scenario_files:
   - <project>/scenarios/ieee30.yaml[5]
   - <project>/scenarios/ieee30.yaml[6]
   - <project>/scenarios/ieee30.yaml[7]
-output_dir: <project>/output/PPO_MIX
+output_dir: <project>/output/PPO
 task:
 #  - "Tune"
 #  - "Train"
   - "Load"
-#  - "Run"
-#  - "Evaluate"
+  - "Run"
+  - "Evaluate"
   - "Replay"
 logging_level: INFO
 n_cpu: Slurm

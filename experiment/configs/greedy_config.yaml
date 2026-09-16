@@ -17,8 +17,7 @@ scenario_files:
   - <project>/scenarios/ieee30.yaml[5]
   - <project>/scenarios/ieee30.yaml[6]
   - <project>/scenarios/ieee30.yaml[7]
-output_dir: <project>/output/Greedy_0726
-compare_with: <project>/output/Gnn_0726
+output_dir: <project>/output/Greedy
 task:
   - "Run"
   - "Evaluate"
@@ -36,4 +35,8 @@ weights:
     computational_performance: 0.0
     survival: 3.0
 env_config:
+  reward:
+    max_line_loading_nminus0: 3.0
+    lines_overloaded_nminus0: 1.0
+  worst_reward: -2
   nminus1: True
