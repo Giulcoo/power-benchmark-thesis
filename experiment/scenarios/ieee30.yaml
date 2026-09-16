@@ -1,0 +1,123 @@
+- category: IEEE
+  name: "30B_ORIG"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+- category: IEEE
+  name: "30B_UP_LD5"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [130, 140, 320]
+  modification:
+      - scale_loads:
+          scale_p: 20
+          scale_q: 20
+          load_indices: [5] # Original P 3 MW
+- category: IEEE
+  name: "30B_UP_LD11"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [110, 140, 290]
+  modification:
+    - scale_loads:
+        scale_p: 20
+        scale_q: 20
+        load_indices: [11] # Original P 3 MW
+- category: IEEE
+  name: "30B_MT_LN"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+  modification:
+    - line_maintenance:
+        0:
+          start: 0
+          end: 365
+          step: 1
+        9:
+          start: 0
+          end: 365
+          step: 1
+        28:
+          start: 0
+          end: 365
+          step: 1
+        29:
+          start: 0
+          end: 365
+          step: 1
+        34:
+          start: 0
+          end: 365
+          step: 1
+- category: IEEE
+  name: "30B_MT_GN"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+  modification:
+    - gen_maintenance:
+        0:
+          start: 0
+          end: 365
+          step: 1
+
+- category: IEEE
+  name: "30B_RC_LN"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+  modification:
+    - scale_line_capacity:
+        scale: 0.25
+        line_indices: [0, 9, 28, 29, 34]
+- category: IEEE
+  name: "30B_RC_LN-"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+  modification:
+    - scale_line_capacity:
+        scale: 0.5
+        line_indices: [0, 9, 28, 29, 34]
+- category: IEEE
+  name: "30B_RC_LN+"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]
+  modification:
+    - scale_line_capacity:
+        scale: 0.1
+        line_indices: [0, 9, 28, 29, 34]

@@ -1,0 +1,65 @@
+name: "GNN PPO Agent"
+agent_type:
+  checkpoint_dir: <output>/checkpoints
+  module_name: example.PpoAgent
+  class_name: PpoAgent
+  init_params:
+    training_iters: 3000
+    checkpoint_every_iters: 50
+    patience: 1000
+    log_dir: <output>/log
+    resume_from_checkpoint: False
+
+  tuner_config:
+    results_dir: <output>/hyperparams
+    module_name: example.PpoTuner
+    class_name: PpoTuner
+    init_params:
+      training_iters_per_trial: 200
+      patience_per_trial: 70
+      n_trials: 30
+      pruner_warmup_steps: 45
+scenario_files:
+  - <project>/scenarios/ieee14.yaml[0]
+  - <project>/scenarios/ieee14.yaml[1]
+  - <project>/scenarios/ieee14.yaml[2]
+  - <project>/scenarios/ieee14.yaml[3]
+  - <project>/scenarios/ieee14.yaml[4]
+  - <project>/scenarios/ieee14.yaml[5]
+  - <project>/scenarios/ieee14.yaml[6]
+
+  - <project>/scenarios/ieee30.yaml[0]
+  - <project>/scenarios/ieee30.yaml[1]
+  - <project>/scenarios/ieee30.yaml[2]
+  - <project>/scenarios/ieee30.yaml[3]
+  - <project>/scenarios/ieee30.yaml[4]
+  - <project>/scenarios/ieee30.yaml[5]
+  - <project>/scenarios/ieee30.yaml[6]
+  - <project>/scenarios/ieee30.yaml[7]
+output_dir: <project>/output/PPO_MIX
+task:
+#  - "Tune"
+#  - "Train"
+  - "Load"
+#  - "Run"
+#  - "Evaluate"
+  - "Replay"
+logging_level: INFO
+n_cpu: Slurm
+# n_gpu: 1
+plotter:
+  Plot: "Matplotlib"
+  Webapp: "Plotly"
+weights:
+  total:
+    overload_mitigation: 2.0
+    voltage_violation_mitigation: 2.0
+    costs: 1.0
+    computational_performance: 0.0
+    survival: 3.0
+env_config:
+  reward:
+    max_line_loading_nminus0: 3.0
+    lines_overloaded_nminus0: 1.0
+  worst_reward: -2
+  nminus1: True

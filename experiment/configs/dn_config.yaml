@@ -1,0 +1,41 @@
+name: "DN"
+agent_type: DoNothing
+scenario_files:
+  - <project>/scenarios/ieee14.yaml[0]
+  - <project>/scenarios/ieee14.yaml[1]
+  - <project>/scenarios/ieee14.yaml[2]
+  - <project>/scenarios/ieee14.yaml[3]
+  - <project>/scenarios/ieee14.yaml[4]
+  - <project>/scenarios/ieee14.yaml[5]
+  - <project>/scenarios/ieee14.yaml[6]
+
+  - <project>/scenarios/ieee30.yaml[0]
+  - <project>/scenarios/ieee30.yaml[1]
+  - <project>/scenarios/ieee30.yaml[2]
+  - <project>/scenarios/ieee30.yaml[3]
+  - <project>/scenarios/ieee30.yaml[4]
+  - <project>/scenarios/ieee30.yaml[5]
+  - <project>/scenarios/ieee30.yaml[6]
+  - <project>/scenarios/ieee30.yaml[7]
+output_dir: <project>/output/DN_0826
+compare_with: <project>/output/Gnn_0726
+task:
+    - "Run"
+    - "Evaluate"
+    - "Replay"
+#    - "Webapp"
+#    - "Plot"
+logging_level: INFO
+n_cpu: Slurm
+plotter:
+  Plot: "Matplotlib"
+  Webapp: "Plotly"
+weights:
+  total:
+    overload_mitigation: 2.0
+    voltage_violation_mitigation: 2.0
+    costs: 1.0
+    computational_performance: 0.0
+    survival: 3.0
+env_config:
+  nminus1: True

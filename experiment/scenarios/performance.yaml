@@ -1,0 +1,18 @@
+- category: IEEE
+  name: "14B_PERF"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [20, 90, 220]
+- category: IEEE
+  name: "30B_PERF"
+  case: 30
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [290]

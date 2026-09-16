@@ -1,0 +1,98 @@
+- category: IEEE
+  name: "14B_ORIG"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [20, 90, 220]
+- category: IEEE
+  name: "14B_UP_GN0"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 190, 280]
+  modification:
+    - scale_generation:
+        scale: 5
+        element_types: ["gen"]
+        element_indices:
+          gen: [0] # Original Value 420 MW
+- category: IEEE
+  name: "14B_UP_LD0"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 120, 60]
+  modification:
+    - scale_loads:
+        scale_p: 15
+        scale_q: 15
+        load_indices: [0]
+
+# For stress test
+- category: IEEE
+  name: "14B_UP_GN0-"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 190, 280]
+  modification:
+    - scale_generation:
+        scale: 2.5
+        element_types: ["gen"]
+        element_indices:
+          gen: [0]
+- category: IEEE
+  name: "14B_UP_GN0+"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 190, 280]
+  modification:
+    - scale_generation:
+        scale: 7.5
+        element_types: ["gen"]
+        element_indices:
+          gen: [0]
+- category: IEEE
+  name: "14B_UP_LD0-"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 120, 60]
+  modification:
+    - scale_loads:
+        scale_p: 5
+        scale_q: 5
+        load_indices: [0]
+- category: IEEE
+  name: "14B_UP_LD0+"
+  case: 14
+  handle_overloads: True
+  indexes:
+    start: 0
+    end: 365
+    step: 1
+  eval_indexes: [40, 120, 60]
+  modification:
+    - scale_loads:
+        scale_p: 25
+        scale_q: 25
+        load_indices: [0]
